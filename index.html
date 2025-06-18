@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adhithyaa - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: "Poppins", sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 75px;
+            background-color: rgb(35, 21, 85);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s, font-size 0.3s;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s, font-size 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: rgb(191, 141, 229);
+            font-size: 1.02rem;
+        }
+
+        hr.mainhr{
+            border: 0;
+            background: rgb(191, 141, 229);
+            height: 1.8px;
+            margin: 40px 84px;
+        }
+
+        hr.secondhr {
+            border: 0;
+            background: rgb(191, 141, 229);
+            height: 1.8px;
+            margin: 0px 84px;
+        }
+
+        .left {
+            font-size: 1.7rem;
+            font-weight: 600;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 75vh;
+            padding: 0 10%;
+        }
+
+        .leftSection {
+            width: 45%;
+            font-size: 3.0rem;
+        }
+
+        .leftSection .button {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .leftSection .btn1,
+        .leftSection .btn2 {
+            padding: 8px;
+            background: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .leftSection .btn1:focus,
+        .leftSection .btn2:focus {
+            outline: none;
+        }
+
+        .rightSection {
+            width: 45%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .rightSection img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+
+        .purple {
+            color: rgb(163, 107, 215);
+        }
+
+        .text-grey {
+            color: gray;
+        }
+
+        #element {
+            color: rgb(163, 107, 215);  
+            max-width: 200
+            px;
+        }
+
+        .secondSection {
+            max-width: 75%;
+            margin: auto;
+            min-height: 80vh;
+        }
+
+        .secondSection h1 {
+            font-size: 1.6rem;
+            margin-bottom: 50px;
+        }
+
+        .secondSection .box {
+            background: rgb(0, 0, 33);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 75vw;
+            padding: 0 10px;
+            flex-wrap: wrap;
+        }
+
+        .vertical-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            flex: 1;
+            margin: 0px 20px;
+        }
+
+        .image-top {
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+            border-radius: 50%;
+            background-color: white;
+            padding: 4px;
+            border: 2px solid rgb(191, 141, 229);
+            margin-bottom: 10px;
+            position: relative;
+            top: 0;
+            transform: translateY(-50%);
+        }
+
+        .vertical {
+            height: 90px;
+            width: 2px;
+            background-color: rgb(191, 141, 229);
+            margin-top: -42px;
+        }
+
+        .label {
+            color: white;
+            margin-top: 5px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #231555;
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer > div {
+            width: 223px;
+            margin-bottom: 20px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+        /* Contact Me Section */
+        .contactSection {
+            max-width: 90%;
+            margin: 60px auto;
+            padding: 40px;
+            background-color: rgb(22, 22, 60);
+            border-radius: 10px;
+            color: white;
+            box-shadow: 0 0 20px rgba(191, 141, 229, 0.3);
+        }
+
+        .contact-heading {
+            font-size: 2rem;
+            color: rgb(191, 141, 229);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .contact-left, .contact-right {
+            flex: 1 1 45%;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .contact-detail i {
+            font-size: 1.8rem;
+            color: rgb(191, 141, 229);
+            margin-top: 5px;
+        }
+
+        .contact-detail h3 {
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+            color: white;
+        }
+
+        .contact-detail p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        .contact-right h2 {
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .contact-right p {
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            color: #bbb;
+        }
+
+        .contact-right form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-right input,
+        .contact-right textarea {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid rgb(191, 141, 229);
+            background: #1e2167;
+            color: white;
+            font-size: 0.95rem;
+            resize: none;
+        }
+
+        .contact-right input:focus,
+        .contact-right textarea:focus {
+            outline: none;
+            border-color: rgb(191, 141, 229);
+            box-shadow: 0 0 5px rgba(191, 141, 229, 0.5);
+        }
+
+        .contact-right button {
+            width: fit-content;
+            background: rgb(191, 141, 229);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact-right button:hover {
+            background: rgb(163, 107, 215);
+        }
+
+        @media screen and (max-width: 768px) {
+            .firstSection {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .leftSection,
+            .rightSection {
+                width: 100%;
+                margin: 20px 0;
+            }
+
+            .rightSection {
+                justify-content: center;
+            }
+
+            .rightSection img {
+                width: 80%;
+            }
+
+            .secondSection .box {
+                flex-direction: column;
+                align-items: center;
+                height: auto;
+            }
+
+            .vertical-container {
+                margin-bottom: 60px;
+            }
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .contact-left, .contact-right {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left"><a href="/">Adhithyaa's Portfolio</a></div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Project</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple">Adhithyaa</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+                <div class="button">
+                    <a href="https://drive.google.com/uc?export=download&id=1sbfcy4shEs7FmSM_8L_5PHiVS85mVSM1" target="_blank" rel="noopener">
+                        <button class="btn1">Download Resume</button>
+                    </a>
+                    <a href="https://github.com/Adhithya2403" target="_blank" rel="noopener">
+                        <button class="btn2">GitHub</button>
+                    </a>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="bg.png" alt="Developer image">
+            </div>
+        </section>
+        <hr class="mainhr">
+        <section class="secondSection">
+            <span class="text-grey">What I have done so far</span>
+            <h1>Work Experience</h1>
+            <hr class="secondhr">
+            <div class="box">
+                <div class="vertical-container">
+                    <img class="image-top" src="developer1.png" alt="Python Developer">
+                    <div class="vertical"></div>
+                    <div class="label">Python Developer</div>
+                    <div>(Aug-2024)</div>
+                    <div>BrainlySpot Intern(Onsite)</div>
+                </div>
+                <div class="vertical-container">
+                    <img class="image-top" src="developer2.png" alt=".Net Developer">
+                    <div class="vertical"></div>
+                    <div class="label">.Net Developer</div>
+                    <div>(Jan-2025)</div>
+                    <div>Altalaya Intern(Onsite)</div>
+                </div>
+                <div class="vertical-container">
+                    <img class="image-top" src="developer3.png" alt="Web Developer">
+                    <div class="vertical"></div>
+                    <div class="label">Web Developer</div>
+                    <div>(Jun-2025)</div>
+                    <div>Fnext Solution Intern(Remote)</div>
+                </div>
+                <div class="vertical-container">
+                    <img class="image-top" src="developer4.jpeg" alt="Cloud and DevOps">
+                    <div class="vertical"></div>
+                    <div class="label">Cloud & DevOps</div>
+                    <div>(Sep2024-Present)</div>
+                    <div>Google Developer Group</div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Me Section -->
+        <section class="contactSection">
+            <section id="contact">
+            <h1 class="contact-heading">Contact Me</h1>
+            <div class="contact-container">
+                <div class="contact-left">
+                    <div class="contact-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Address</h3>
+                            <p>Avinashipalyam<br>Tiruppur,Tamil Nadu</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>adithyaa24032006@gmail.com<br>adhithyaagenai@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <h2>Send me a message</h2>
+                    <p>If you have any work or queries, send me a message below. I'd love to hear from you!</p>
+                    <form action="#">
+                        <input type="text" placeholder="Enter your name" required>
+                        <input type="email" placeholder="Enter your email" required>
+                        <textarea placeholder="Your message here..." required></textarea>
+                        <button type="submit" class="btn1">Send Now</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Adhithyaa Developer Portfolio</h3>
+            </div>
+            <div class="footer-Second">
+                <ul>
+                    <li>THANKS TO VISIT MY PROTFOLIO</li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="footer-rights">Copyrights © Adhithyaa's Portfolio | All rights reserved</div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: [
+                "Web Developer",
+                "Digital Marketing Strategist",
+                "Team Leader & Communicator",
+                "AI/ML Enthusiast"
+            ],
+            typeSpeed: 55,
+            backSpeed: 55,
+            loop: true
+        });
+    </script>
+</body>
+</html>
